@@ -8,6 +8,12 @@ the VDT, then please refer to this link:
    http://vdt.cs.wisc.edu/releases/certs/ca_changes.txt
 OSG CA Package in new format (md5, sha1 hashes) to support openssl 1.x
 
+Changes from 1.143 to 1.143-2
+---------------------------
+Built 23 June 2026
+
+* Add LetsEncrypt YE and YR Certificates
+
 Changes from 1.141 to 1.143
 ---------------------------
 Built 23 June 2026
