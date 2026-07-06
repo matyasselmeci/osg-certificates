@@ -1,6 +1,6 @@
 %define igtf_version 1.143
 %define osg_version  1.143
-%define release_num  2
+%define release_num  3
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -103,6 +103,9 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Mon Jul 06 2026 Matt Westphall <westphall@wisc.edu> - 1.143-3
+- Add Missing YE/YR Root Certificates (SOFTWARE-6365)
+
 * Mon Jul 06 2026 Matt Westphall <westphall@wisc.edu> - 1.143-2
 - Add LetsEncrypt YE/YR Certificates (SOFTWARE-6365)
 
