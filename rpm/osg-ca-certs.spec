@@ -1,6 +1,6 @@
 %define igtf_version 1.143
 %define osg_version  1.143
-%define release_num  1
+%define release_num  2
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -103,6 +103,9 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Mon Jul 06 2026 Matt Westphall <westphall@wisc.edu> - 1.143-2
+- Add LetsEncrypt YE/YR Certificates (SOFTWARE-6365)
+
 * Tue Jun 23 2026 Matt Westphall <westphall@wisc.edu> - 1.143-1
 - Update to IGTF 1.143 (SOFTWARE-6360)
 
