@@ -1,6 +1,6 @@
-%define igtf_version 1.143
-%define osg_version  1.143
-%define release_num  3
+%define igtf_version 1.144
+%define osg_version  1.144
+%define release_num  1 
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -103,6 +103,9 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Tue Jul 21 2026 Matt Westphall <westphall@wisc.edu> - 1.144-1
+- Update to IGTF 1.144 (SOFTWARE-6375)
+
 * Mon Jul 06 2026 Matt Westphall <westphall@wisc.edu> - 1.143-3
 - Add Missing YE/YR Root Certificates (SOFTWARE-6365)
 
