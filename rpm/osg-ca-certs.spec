@@ -1,6 +1,6 @@
 %define igtf_version 1.144
 %define osg_version  1.144
-%define release_num  1 
+%define release_num  2 
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -14,9 +14,6 @@ URL:            http://repo.osg-htc.org/cadist/
 
 Source0:        https://github.com/opensciencegrid/osg-certificates/archive/v%{vtag}/osg-certificates-%{vtag}.tar.gz
 Source1:        https://dist.eugridpma.info/distribution/igtf/current/igtf-policy-installation-bundle-%{igtf_version}.tar.gz
-Source2:        letsencrypt-certificates.tar.gz
-# can obtain latest letsencrypt-certificates.tar.gz with a github.source line:
-# type=github repo=cilogon/letsencrypt-certificates tarball=letsencrypt-certificates.tar.gz tag=master hash=...
 
 BuildArch:      noarch
 
@@ -57,7 +54,6 @@ For details about the current certificate release, see https://repo.openscienceg
 %prep
 %setup    -n osg-certificates-%{vtag}
 %setup -D -n osg-certificates-%{vtag} -a 1
-%setup -D -n osg-certificates-%{vtag} -a 2
 
 %build
 export IGTF_CERTS_VERSION=%{igtf_version}
@@ -103,6 +99,10 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Tue Aug 04 2026 Mátyás Selmeci <mselmeci@wisc.edu> - 1.144-2
+- Add symlinks for Let's Encrypt YE/YR Certificates (SOFTWARE-6384)
+- Get Let's Encrypt certificates from https://github.com/opensciencegrid/letsencrypt-certificates at v0.6.1
+
 * Tue Jul 21 2026 Matt Westphall <westphall@wisc.edu> - 1.144-1
 - Update to IGTF 1.144 (SOFTWARE-6375)
 
