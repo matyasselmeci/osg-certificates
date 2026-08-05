@@ -36,30 +36,25 @@ Currently the only thing here is to add letsencrypt certs, but in theory
 other certs could be added or removed from here.
 
 
-Updating the letsencrypt tarball:
+Updating Let's Encrypt certificates:
 
-It is not necessary to update the letsencrypt tarball every time, but if
-we want to update it we can as follows.
+Let's Encrypt certificates are in the letsencrypt-certificates dir
+as a Git submodule from
+https://github.com/opensciencegrid/letsencrypt-certificates
 
-As is documented in rpm/osg-ca-certs.spec, you can *obtain* the latest
-letsencrypt-certificates.tar.gz with a github.source line:
+To update the submodule, make sure it's checked out in your local clone:
 
-  type=github repo=cilogon/letsencrypt-certificates tarball=letsencrypt-certificates.tar.gz tag=master hash=...
+  $ git submodule update --init letsencrypt-certificates
 
-You can use the 'fetch-dot-source' util from osg-build to download this tarball.
+Fetch and switch to the desired tag:
 
-  $ cd /tmp
-  $ echo type=github repo=cilogon/letsencrypt-certificates tarball=letsencrypt-certificates.tar.gz tag=master hash=... > letsencrypt.github.source
-  $ fetch-dot-source letsencrypt.github.source
+  $ cd letsencrypt-certificates
+  $ git fetch --tags
+  $ git switch --detach <TAG>
 
-You may have to update the 'hash' parameter to match the current upstream
-master commit, or else run fetch-dot-source with the '-n' option to ignore
-a hash mismatch.
+Then add and commit the change:
 
-Since this is an externally controlled repo, we want to keep this source in our
-upstream source cache.  So, after downloading a new letsencrypt tarball, copy
-it to our upstream source cache, and update the
-osg-ca-certs/upstream/letsencrypt.tarball.source appropriately:
-
-  letsencrypt-certificates/git_36f6703/letsencrypt-certificates.tar.gz sha1sum=9c936fb6b6141c038b0ef58e7982cf482dfe9026
+  $ cd ..
+  $ git add letsencrypt-certificates
+  $ git commit -m "Update letsencrypt-certificates submodule to <TAG>" 
 
