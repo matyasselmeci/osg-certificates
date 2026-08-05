@@ -1,0 +1,3 @@
+[submodule "letsencrypt-certificates"]
+	path = letsencrypt-certificates
+	url = https://github.com/opensciencegrid/letsencrypt-certificates
