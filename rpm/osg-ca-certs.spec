@@ -1,6 +1,6 @@
 %define igtf_version 1.144
 %define osg_version  1.144
-%define release_num  2 
+%define release_num  3 
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -99,6 +99,9 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Thu Aug 20 2026 Matt Westphall <westphall@wisc.edu> - 1.144-3
+- Fix syntax error in Lets Encrypt Signing Policy (SOFTWARE-6402)
+
 * Tue Aug 04 2026 Mátyás Selmeci <mselmeci@wisc.edu> - 1.144-2
 - Add symlinks for Let's Encrypt YE/YR Certificates (SOFTWARE-6384)
 - Get Let's Encrypt certificates from https://github.com/opensciencegrid/letsencrypt-certificates at v0.6.1
