@@ -1,6 +1,6 @@
-%define igtf_version 1.144
-%define osg_version  1.144
-%define release_num  3 
+%define igtf_version 1.146
+%define osg_version  1.146
+%define release_num  1
 %define vtag         %{osg_version}.igtf.%{igtf_version}-%{release_num}
 %define enable_trusted_sha1_certs 0
 
@@ -99,6 +99,9 @@ mv certificates/* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 %endif
 
 %changelog
+* Wed Sep 02 2026 Mátyás Selmeci <mselmeci@wisc.edu> - 1.146-1
+- Update to IGTF 1.146 (SOFTWARE-6417)
+
 * Thu Aug 20 2026 Matt Westphall <westphall@wisc.edu> - 1.144-3
 - Fix syntax error in Lets Encrypt Signing Policy (SOFTWARE-6402)
 
