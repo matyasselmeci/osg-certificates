@@ -57,18 +57,18 @@ Built 23 June 2026
 * Added new InCommon Gen 4 issuing authority and updated HLCA (US)
 
 
-Changes from 1.140 to 1.141 
---------------------------- 
+Changes from 1.140 to 1.141
+---------------------------
 Built 21 May 2026
 
-    Added new UK eScience CA ECC hierarchy (UK) 
+    Added new UK eScience CA ECC hierarchy (UK)
 
-    Withdrawn expiring HellasGrid2016 CA (GR) 
+    Withdrawn expiring HellasGrid2016 CA (GR)
 
-    Withdrawn expiring SRCE CA (HR) 
+    Withdrawn expiring SRCE CA (HR)
 
     Removed GPG Gen3 package signing key (GPG-KEY-EUGridPMA-RPM-3)
-    
+
 Changes from 1.139 to 1.140
 ---------------------------
 Built 30 MAR 2026
@@ -112,7 +112,7 @@ Built 9 JUNE 2025
 * Added new CESNET CA Gen5 hierarchy and new off-line Root 2 (CZ)
 * Withdrawn retired CILogon CAs cilogon-basic and cilogon-silver (US)
 * a new version of the generation-4 package signing key is now included that
-  uses a SHA-256 digest function for its self-signature. Fingerprint and key 
+  uses a SHA-256 digest function for its self-signature. Fingerprint and key
   material is otherwise identical: 565F4528EAD3F53727B5A2E9B055005676341F1A.
 
 
@@ -126,9 +126,9 @@ Built 7 MAY 2025
 NOTE: the _default_ package signing key has changed to the 4th generation
       for increased security and compatibility. The new key is a 2048 bit
       RSA with fingerprint 565F4528EAD3F53727B5A2E9B055005676341F1A.
-      The GPG public key file can be retrieved from 
+      The GPG public key file can be retrieved from
         https://dl.igtf.net/distribution/current/GPG-KEY-EUGridPMA-RPM-4
-      and imported on rpm-based distributions with 'rpmkeys --import <file>' 
+      and imported on rpm-based distributions with 'rpmkeys --import <file>'
       or on Debian (apt) based systems set in Signed-By in sources.list or
       added as a file in /etc/apt/trusted.gpg.d/
 
@@ -149,7 +149,7 @@ Changes from 1.132 to 1.133
 Built 25 FEB 2025
 
 * Updated re-issued GridCanada root with extended validity period (CA)
-* Added GEANT TCS Generation 5 TLS and Auth ICAs and corresponding HARICA 
+* Added GEANT TCS Generation 5 TLS and Auth ICAs and corresponding HARICA
   and private trust roots (EU)
 * updated SHA-256 root CA for RDIG mitigating EL9/FedoraCore deprication
 * MARGI put on hold due to domainname resolution issues (MK)
@@ -157,7 +157,7 @@ Built 25 FEB 2025
 ===== Version 1.132 (IGTF 1.132) ===========
 Built 17 DEC 2024
 
-* added new trust anchor for TRGRID transition (TR) 
+* added new trust anchor for TRGRID transition (TR)
 
 ===== Version 1.131 (IGTF 1.131) ===========
 Built 30 SEP 2024
@@ -217,7 +217,7 @@ Built 31 OCT 2023
 
 ===== Version 1.114 (IGTF 1.123) ===========
 Built 6 SEPT 2023
-* Add ECC private trust hierarchy for GEANT (Research and Education) TCS (EU) 
+* Add ECC private trust hierarchy for GEANT (Research and Education) TCS (EU)
 * Added accredited private trust eMudhra IGTF root and issuers (IN)
 
 ===== Version 1.113 (IGTF 1.122) ===========
@@ -390,7 +390,7 @@ IGTF 1.95 release
 
 ===== Version 1.77 ===========
 Built 06 NOV 2018
-* Included MD5 checksum again 
+* Included MD5 checksum again
 
 ===== Version 1.76 ===========
 Built 30 OCT 2018
@@ -465,7 +465,7 @@ IGTF 1.86 release
 * updated MaGrid CA with extended validity period (MA)
 * removed discontinued pkIRISGrid CA (ES)
 * discontinued depricated yum v2 and rpm-apt package management support
-  (only affects yum installs on RHEL/CentOS 2&3, Fedora Core 1-3, and bespoke 
+  (only affects yum installs on RHEL/CentOS 2&3, Fedora Core 1-3, and bespoke
   support for installing RPM packages using APT for pre-2006 RedHat systems)
 
 ====== Version 1.65 ===========
@@ -488,9 +488,9 @@ IGTF 1.84 release
 
 IGTF 1.83 release
 * Added new trust anchor for accredited KISTI CA v3 (KR)
-* Removed obsolete GEANT TCS G1 and G2 (old Comodo-backed) trust anchors: 
-  UTN-USERFirst-Hardware TERENA-eScience-SSL-CA AAACertificateServices 
-  UTNAAAClient TERENAeSciencePersonalCA UTN-USERTrust-RSA-CA 
+* Removed obsolete GEANT TCS G1 and G2 (old Comodo-backed) trust anchors:
+  UTN-USERFirst-Hardware TERENA-eScience-SSL-CA AAACertificateServices
+  UTNAAAClient TERENAeSciencePersonalCA UTN-USERTrust-RSA-CA
   TERENA-eScience-SSL-CA-2 TERENAeSciencePersonalCA2 (EU)
 
 ====== Version 1.62 ===========
@@ -649,7 +649,7 @@ IGTF 1.63 release
 * Removed obsoleted and replaced NIIF CA (HU)
 * Extended validity period of the KEK CA (JP)
 * Removed obsoleted d254cc30/CERN-Root 1d879c6c/CERN-TCA anchors (CERN)
-* Updated RPDNC namespaces to permit DigiCert Grid Trust G2 ICAs for 
+* Updated RPDNC namespaces to permit DigiCert Grid Trust G2 ICAs for
   DigiCert Assured ID Root CA (US)
 * Updated RPDNC namespaces and signing_policy files for G2 series
   DigiCert Grid CAs pending ICA reissuance for reverse RDN issue (US)
@@ -746,7 +746,7 @@ IGTF 1.55 release
 * New root certificate with extended life time for NorduGrid CA 1f0e8352 (DK)
 * Updated contact metadata for all RENATER Grid-FR related CAs (FR)
 * Updated CRL URL and metadata for IHEP 2013 CA 39d30eba (CN)
-* New root certificates for NCSA CA re-key: MyProxy CA 2013 c36f6349/7aa2b7bd 
+* New root certificates for NCSA CA re-key: MyProxy CA 2013 c36f6349/7aa2b7bd
   and Two Factor CA 2013 ca157cee/48c8f10a (US)
 * New root certificate for EGI catch-all CA "SEEGRID-CA-2013" 772dbd1c (GR)
 * Removed AIST Grid CA (JP)
@@ -817,7 +817,7 @@ IGTF 1.50 release
 ====== Version 1.29 =============
 Built 11 Jun 2012
 
-IGTF 1.48 
+IGTF 1.48
 • Extended life time of DFN GridGermany Root (1149214e) and CDPs (DE)
 
 ====== Version 1.28 =============
@@ -983,7 +983,7 @@ Updated
 ===== Version 1.12 ==================
 Released 15 Feb 2010
 IGTF 1.33 - current hash format
-Removed 
+Removed
     12a1d8c2 CNRS-Grid-FR
     34a509c3 CNRS-Projets
     cf4ba8c8 CNRS
@@ -1011,7 +1011,7 @@ Continue with IGTF 1.32:
   See https://twiki.grid.iu.edu/bin/view/Security/CADistribution#References
   for information regarding the apt repository.
 * Signed the distribution with a new OSG Security Team PGP key, id 7FD42669.
-  You can pick up the new PGP key from 
+  You can pick up the new PGP key from
   https://twiki.grid.iu.edu/bin/view/Security/SecurityTeamMembers
 
 ===== Version 1.10 ===================
@@ -1087,7 +1087,7 @@ Removed unaccredited CAs:
   * SDSC (3deda549)
   * NPACI (b89793e4)
   * TACC (9a1da9f9)
-  * old NCSA CA (4a6cd8b1) 
+  * old NCSA CA (4a6cd8b1)
 
 ===== Version 1.4 ====================
 Released 3-Feb-2009
@@ -1107,7 +1107,7 @@ Released 15-Dec-2008
 Updated to IGTF 1.26
   * Added accredited classic Indian Grid CA (da75f6a8)
   * Updated IUCC root certificate with extended life time (6fee79b0)
-  * Updated BEGrid  and UCSD-PRAGMA URL metadata 
+  * Updated BEGrid  and UCSD-PRAGMA URL metadata
   * New BEGrid2008 root certificate (e8d818e6)
   * Extended life time of the SEE-GRID CA (468d15b3)
   * Included CRL for NCSA SLCS CA (f2e89fe3)
@@ -1123,7 +1123,7 @@ Released 29-Sep-2008
   - based on IGTF 1.25
   - added Taiwan NCHC
 
-===== Initial version: 1.0 ===== 
+===== Initial version: 1.0 =====
 NOTE: This initial GOC hosted release is based on the VDT v39 CA
 Certificate distribution, with the following changes.
 
